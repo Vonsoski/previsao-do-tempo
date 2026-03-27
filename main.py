@@ -1,5 +1,5 @@
 import modulos as consultas
-#dados cidade
+#dados cidade, no contry_code, precisa estar de acordo com a ISO 3166-2BR
 city_name = 'Sergipe'
 country_code = 'BR-SE'
 
