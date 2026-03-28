@@ -16,6 +16,6 @@ lat, lon = consulta_api.obter_coord(consulta)
 consulta_city = consulta_api.info_tempo(lat, lon)
 
 #Consulta a temperatura
-graus = consulta_api.consulta_temperatura(consulta_city)
+descricao, graus, pais, cidade = consulta_api.consulta_temperatura(consulta_city)
 
 print(graus)
