@@ -4,7 +4,6 @@ from src.config import API_KEY
 
 class WeatherAPI:
     def consulta_city (self,city_name,state_code,country_code):
-        
         params = {
             'q': f"{city_name},{state_code},{country_code}",
             'appid': API_KEY,
@@ -12,8 +11,9 @@ class WeatherAPI:
         }
         url = 'https://api.openweathermap.org/geo/1.0/direct?'
         response = requests.get(url, params = params)
-        return json.loads(response.text)
-    
+        responsetext = json.loads(response.text)
+        return response.status_code, responsetext
+
     def obter_coord(self, response):
         lat = response[0]['lat']
         lon = response[0]['lon']
@@ -35,7 +35,6 @@ class WeatherAPI:
         descricao = response['weather'][0]['description']
         pais = response['sys']['country']
         cidade = response['name']
-        print(cidade)
         weather = round(temperatura - 273.15)
         return descricao, weather, pais, cidade
     
