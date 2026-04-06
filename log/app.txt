@@ -1,0 +1,2 @@
+ 2026-04-06 08:49:57,237 - ERROR - Ocorreu um erro - linha 30
+ 2026-04-06 08:51:06,500 - ERROR - Ocorreu um erro na consulta da api 401 - linha 28

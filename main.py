@@ -1,7 +1,7 @@
 import logging
 import modulos as consultas
 
-logging.basicConfig(level=logging.ERROR, format=" %(asctime)s - %(levelname)s - %(message)s - linha %(lineno)d")
+logging.basicConfig(filename='log/app.txt', level=logging.ERROR, format=" %(asctime)s - %(levelname)s - %(message)s - linha %(lineno)d")
 #dados cidade, no country_code, precisa estar de acordo com a ISO 3166-2BR
 city_name = 'Araçatuba'
 state_code = 'SP'
